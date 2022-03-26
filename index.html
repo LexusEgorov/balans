@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="coords">
+            <canvas class="coord" width="800" height="800"></canvas>
+            <p class="size-field">Размер клетки: <span class="size-value">50</span></p>
+        </div>
+        <section class="workspace">
+            <form action="" class="menu">
+                <label for="select">Выберите операцию</label>
+                <select name="select" id="select">
+                    <option value="summ">Сумма</option>
+                    <option value="decomposition">Разложение</option>
+                    <option value="table">Таблица</option>
+                </select>
+            </form>
+            <div class="operations">
+                    
+            </div>
+        </section>
+    </section>
+    <template class="main-control">
+    </template>
+    <template class="sum-vectors">
+        <form action="" class="summ-form">
+            <fieldset class="summ-form-fs">
+                <legend>Сложение векторов</legend>
+                <fieldset class="vector">
+                    <label for="len">Длина</label>
+                    <input type="text" autocomplete="off" id="len" value="0">
+                    <label for="ang">Угол</label>
+                    <input type="text" autocomplete="off" id="ang" value="0">
+                </fieldset>
+                <fieldset class="vector">
+                    <label for="len">Длина</label>
+                    <input type="text" autocomplete="off" id="len" value="0">
+                    <label for="ang">Угол</label>
+                    <input type="text" autocomplete="off" id="ang" value="0">
+                </fieldset>
+                <fieldset class="vector">
+                    <label for="len">Длина</label>
+                    <input type="text" autocomplete="off" id="len" value="0">
+                    <label for="ang">Угол</label>
+                    <input type="text" autocomplete="off" id="ang" value="0">
+                </fieldset>
+                <fieldset class="vector">
+                    <label for="len">Длина</label>
+                    <input type="text" autocomplete="off" id="len" value="0">
+                    <label for="ang">Угол</label>
+                    <input type="text" autocomplete="off" id="ang" value="0">
+                </fieldset>
+                <fieldset class="vector">
+                    <label for="len">Длина</label>
+                    <input type="text" autocomplete="off" id="len" value="0">
+                    <label for="ang">Угол</label>
+                    <input type="text" autocomplete="off" id="ang" value="0">
+                </fieldset>
+                <input type="reset" class="reset" value="Очистить">
+                <input type="submit" class="summ" value="Посчитать">
+            </fieldset>
+            <p class="result">Результат</p>
+        </form>
+    </template>
+    <template class="vector">
+        <fieldset class="vector">
+            <label for="len">Длина</label>
+            <input type="text" autocomplete="off" id="len" value="0">
+            <label for="ang">Угол</label>
+            <input type="text" autocomplete="off" id="ang" value="0">
+        </fieldset>
+    </template>
+    <template class="vector-to-angles">
+        <form action="" class="decomposition-form">
+            <fieldset class="decomposition-form-fs">
+                <legend>Разложение вектора</legend>
+                <fieldset class="vector">
+                    <label for="len">Длина</label>
+                    <input type="text" autocomplete="off" id="len" value="0">
+                    <label for="ang">Угол</label>
+                    <input type="text" autocomplete="off" id="ang" value="0">
+                </fieldset>
+                <fieldset class="vector angles">
+                    <label for="len1">Угол 1</label>
+                    <input type="text" autocomplete="off" id="ang1" value="0">
+                    <label for="ang2">Угол 2</label>
+                    <input type="text" autocomplete="off" id="ang2" value="0">
+                </fieldset>
+                <input type="reset" class="reset" value="Очистить">
+                <input type="submit" class="decomposition" value="Разложить">
+            </fieldset>
+            <div class="results">
+                <p class="result">Результат</p>
+                <p class="result">Результат</p>
+            </div>
+        </form>
+    </template>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>

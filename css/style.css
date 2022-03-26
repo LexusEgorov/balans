@@ -1,0 +1,102 @@
+body{
+    padding-top: 20px;
+    font-family: 'Roboto';
+}
+
+.wrapper{
+    margin: auto;
+    display: flex;
+    width: 1800px;
+    justify-content: space-between;
+}
+
+.coord{
+    width: 800px;
+    height: 800px;
+    border: 5px solid orange;
+    margin: 0;
+    background-image: url("setka.png");
+}
+
+.coords{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.size-field{
+    padding: 6px;
+    margin: 0;
+    background-color: orange;
+    height: 20px;
+    font-size: 18px;
+    border-radius: 2%;
+}
+
+.menu{
+    padding: 10px;
+    height: 20px;
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.operations{
+    width: 800px;
+}
+
+.workspace{
+    width: 800px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summ-form-fs{
+    border: 2px solid green;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.summ-form-fs .vector{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.vector label{
+    margin-right: 10px;
+}
+
+.vector input{
+    margin-right: 50px;
+}
+
+.results{
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+
+.result{
+    background-color: lightblue;
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.decomposition-form-fs{
+    border: 2px solid green;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.decomposition-form-fs .vector{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 550px; 
+}
