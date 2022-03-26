@@ -1,11 +1,24 @@
 import { radToDeg } from "../util/util.js";
 import { getVectors } from "../vector-operations/find-vectors.js";
+import { clear } from "../canvas/canvas.js";
 
 function addDecompositionHandler(){
     const decomposition = document.querySelector('.decomposition-form');
     const decompButton = decomposition.querySelector('.decomposition');
     const resFields = decomposition.querySelector('.results').children;
-    
+    const res = document.querySelectorAll('.reset');
+
+    res.forEach((reset) => {
+        reset.addEventListener('click', function(){
+            clear();
+            document.querySelector('.size-value').textContent = 50;
+            const results = document.querySelectorAll('.result');
+            results.forEach((res) =>{
+                res.textContent = 'Результат';
+            })
+        }); 
+    });
+
     decompButton.addEventListener('click', function(evt){
         evt.preventDefault();
         const len = decomposition.querySelector('.vector').querySelector('#len').value;

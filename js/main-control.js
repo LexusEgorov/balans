@@ -1,5 +1,6 @@
 import { addSummHandler } from "./form-control/form-summ.js";
 import { addDecompositionHandler } from "./form-control/form-decomposition.js";
+import { clear } from "./canvas/canvas.js";
 
 const selector = document.querySelector('#select');
 const input = document.querySelector('.operations');
@@ -35,6 +36,8 @@ function getHandler(value){
 }
 
 selector.addEventListener('change', () =>{
+    clear();
+    document.querySelector('.size-value').textContent = 50;
     const operation = getOperation(selector.value);
     input.innerHTML = '';
     input.appendChild(document.querySelector(operation).content.cloneNode(true));
