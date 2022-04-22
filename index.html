@@ -23,15 +23,37 @@
                 <select name="select" id="select">
                     <option value="summ">Сумма</option>
                     <option value="decomposition">Разложение</option>
-                    <option value="table">Таблица</option>
+                    <option value="subtraction">Вычитание</option>
+                    <option value="table-sub">Таблица</option>
                 </select>
             </form>
             <div class="operations">
-                    
             </div>
         </section>
     </section>
     <template class="main-control">
+    </template>
+    <template class="subtraction-vectors">
+        <form action="" class="subtraction-form">
+            <fieldset class="subtraction-form-fs">
+                <legend>Вычитание векторов</legend>
+                <fieldset class="vector">
+                    <label for="len">Длина</label>
+                    <input type="text" autocomplete="off" id="len" value="0">
+                    <label for="ang">Угол</label>
+                    <input type="text" autocomplete="off" id="ang" value="0">
+                </fieldset>
+                <fieldset class="vector">
+                    <label for="len">Длина</label>
+                    <input type="text" autocomplete="off" id="len" value="0">
+                    <label for="ang">Угол</label>
+                    <input type="text" autocomplete="off" id="ang" value="0">
+                </fieldset>
+                <input type="reset" class="reset" value="Очистить">
+                <input type="submit" class="subtract" value="Посчитать">
+            </fieldset>
+            <p class="result">Результат</p>
+        </form>
     </template>
     <template class="sum-vectors">
         <form action="" class="summ-form">
@@ -106,7 +128,19 @@
             </div>
         </form>
     </template>
-    <script src="js/main.js" type="module"></script>
+    <template class="tables-sub">
+        <fieldset class="tables-substraction-fs">
+            <legend>Разность по таблице</legend>
+            <table class="table-subtraction table-subtraction--first">
+            </table>
+            <table class="table-subtraction table-subtraction--second">
+            </table>
+            <input type="submit" class="substract" value="Вычислить">
+            <table class="table-subtraction table-subtraction--result">
+            </table>
+        </fieldset>
+    </template>
+        <script src="js/main.js" type="module"></script>
 </body>
 
 </html>

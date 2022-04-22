@@ -10,11 +10,11 @@ function clear() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-function drawArrow(x, y, angle) {
+function drawArrow(x, y, angle, xStart) {
     const LENGTH = 20;
     const ROTATE_FIRST = 170 + radToDeg(angle);
     const ROTATE_SECOND = ROTATE_FIRST + 20;
-    if (x < 400) {
+    if (x - xStart <= 0) {
         ctx.lineTo(x - LENGTH * Math.cos(degToRad(ROTATE_FIRST)), y - LENGTH * Math.sin(degToRad(ROTATE_FIRST)));
         ctx.moveTo(x, y);
         ctx.lineTo(x - LENGTH * Math.cos(degToRad(ROTATE_SECOND)), y - LENGTH * Math.sin(degToRad(ROTATE_SECOND)));
@@ -37,7 +37,7 @@ function drawVector(vector, coeff, color = 'green', xStart = 400, yStart = 400) 
     ctx.lineTo(xStart + vector.x / coeff, yStart - vector.y / coeff);
     ctx.lineCap = 'round';
     ctx.stroke();
-    drawArrow(xStart + vector.x / coeff, yStart - vector.y / coeff, ANGLE);
+    drawArrow(xStart + vector.x / coeff, yStart - vector.y / coeff, ANGLE, xStart);
     
 }
 

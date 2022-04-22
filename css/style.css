@@ -3,11 +3,15 @@ body{
     font-family: 'Roboto';
 }
 
+.hidden{
+    display: none !important;
+}
+
 .wrapper{
     margin: auto;
     display: flex;
     width: 1800px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .coord{
@@ -42,11 +46,14 @@ body{
 }
 
 .operations{
-    width: 800px;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .workspace{
-    width: 800px;
+    max-width: 1400px;
     padding: 0;
     margin: 0;
     display: flex;
@@ -61,6 +68,18 @@ body{
 }
 
 .summ-form-fs .vector{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.subtraction-form-fs{
+    border: 2px solid green;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.subtraction-form-fs .vector{
     margin-bottom: 10px;
     display: flex;
     justify-content: space-around;
@@ -99,4 +118,30 @@ body{
     display: flex;
     justify-content: space-around;
     width: 550px; 
+}
+
+.table-subtraction{
+    border-collapse: collapse;
+    border: 1px solid gray;
+    margin-bottom: 40px;
+}
+
+.table-subtraction td{
+    width: 110px;
+    height: 25px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.table-subtraction .len{
+    width: 30px;
+}
+
+.table-subtraction .ang{
+    width: 30px;
+}
+
+.tables-substraction-fs{
+    border: 2px solid green;
+    border-radius: 5px;
 }

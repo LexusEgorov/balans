@@ -68,12 +68,53 @@ function createVector(len, ang) {
     return a;
 }
 
+function subtraction(a, b){
+    const X_START = 400;
+    const Y_START = 400;
+    const reverseB = new vectorByCoord(-b.x, -b.y);
+    const result = sumVector(a, reverseB);
+    const set = [a, b, result];
+    const coeff = getCoeff(set);
+    drawVector(a, coeff, 'green');
+    drawVector(b, coeff, 'green');
+    drawVector(result, coeff, 'blue', X_START + b.x / coeff, Y_START - b.y / coeff);
+    document.querySelector('.size-value').textContent = SIZE * coeff;
+    return result;
+}
+
+function subtractVectors(set){
+    return subtraction(set[0], set[1]);
+}
+
+function tableSubtraction(firstSet, secondSet){
+    const resultSet = {
+        vertical: [],
+        transverse: [],
+        axial: [],
+    };
+    for(let i = 0; i < firstSet.vertical.length; i++){
+        const reverse = new vectorByCoord(-firstSet.vertical[i].x, -firstSet.vertical[i].y);
+        resultSet.vertical.push(sumVector(secondSet.vertical[i], reverse))
+    }
+    for(let i = 0; i < firstSet.transverse.length; i++){
+        const reverse = new vectorByCoord(-firstSet.transverse[i].x, -firstSet.transverse[i].y);
+        resultSet.transverse.push(sumVector(secondSet.transverse[i], reverse))
+    }
+    for(let i = 0; i < firstSet.axial.length; i++){
+        const reverse = new vectorByCoord(-firstSet.axial[i].x, -firstSet.axial[i].y);
+        resultSet.axial.push(sumVector(secondSet.axial[i], reverse))
+    }
+    return resultSet;
+}
+
 export {
     degToRad,
     radToDeg,
     createVector,
     sumVectors,
+    subtractVectors,
     getCoeff,
+    tableSubtraction,
     vectorByAng,
     vectorByCoord,
 };
